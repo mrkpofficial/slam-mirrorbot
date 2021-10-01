@@ -511,8 +511,8 @@ def qb_unzip_leech(update, context):
 def qb_zip_leech(update, context):
     _mirror(context.bot, update, True, isZip=True, isQbit=True, isLeech=True)
 
-mirror_handler = CommandHandler(BotCommands.MirrorCommand, mirror,
-                                filters=CustomFilters.authorized_chat | CustomFilters.authorized_user, run_async=True)
+mirror_handler = CommandHandler(BotCommands.MirrorCommand, mirror,)
+
 tar_mirror_handler = CommandHandler(BotCommands.TarMirrorCommand, tar_mirror,
                                     filters=CustomFilters.authorized_chat | CustomFilters.authorized_user, run_async=True)
 unzip_mirror_handler = CommandHandler(BotCommands.UnzipMirrorCommand, unzip_mirror,
